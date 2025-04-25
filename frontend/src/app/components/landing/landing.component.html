@@ -1,33 +1,70 @@
-<div class="landing-container">
+<div class="landing-container" [class.dark-mode]="isDarkMode">
+  <nav class="navbar">
+    <div class="logo">LinguaLearn</div>
+    <button class="theme-toggle" (click)="toggleDarkMode()">
+      {{ isDarkMode ? '☀️' : '🌙' }}
+    </button>
+  </nav>
+
   <div class="hero-section">
-    <h1>Welcome to Learning Hub</h1>
-    <p class="subtitle">Expand your knowledge with interactive learning experiences</p>
+    <h1>Master New Languages</h1>
+    <p class="subtitle">Learn English, Kiswahili, French, and German through interactive lessons</p>
     <div class="cta-buttons">
-      <button class="primary-btn">Get Started</button>
-      <button class="secondary-btn">Browse Courses</button>
+      <button class="primary-btn">Start Learning Now</button>
+      <button class="secondary-btn">Take a Free Test</button>
+    </div>
+  </div>
+
+  <div class="languages-grid">
+    <div class="language-card" *ngFor="let lang of languages">
+      <div class="language-icon">{{ lang.icon }}</div>
+      <h3>{{ lang.name }}</h3>
+      <p>{{ lang.level }}</p>
+      <button class="explore-btn">Explore Course</button>
     </div>
   </div>
 
   <div class="features-grid">
     <div class="feature-card">
-      <div class="icon">📚</div>
-      <h3>Rich Content</h3>
-      <p>Access comprehensive learning materials and resources</p>
-    </div>
-    <div class="feature-card">
       <div class="icon">🎯</div>
-      <h3>Track Progress</h3>
-      <p>Monitor your learning journey with detailed analytics</p>
+      <h3>Personalized Learning</h3>
+      <p>Adaptive lessons that match your learning pace and style</p>
     </div>
     <div class="feature-card">
-      <div class="icon">🤝</div>
-      <h3>Community</h3>
-      <p>Connect with fellow learners and share experiences</p>
+      <div class="icon">💬</div>
+      <h3>Interactive Practice</h3>
+      <p>Real-world conversations and pronunciation exercises</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📊</div>
+      <h3>Progress Tracking</h3>
+      <p>Detailed insights into your learning journey</p>
     </div>
     <div class="feature-card">
       <div class="icon">🏆</div>
-      <h3>Achievements</h3>
-      <p>Earn certificates and badges as you progress</p>
+      <h3>Certifications</h3>
+      <p>Earn recognized certificates as you progress</p>
+    </div>
+  </div>
+
+  <div class="why-us-section">
+    <h2>Why Choose LinguaLearn?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <span class="benefit-icon">👩‍🏫</span>
+        <h4>Native Teachers</h4>
+        <p>Learn from experienced native speakers</p>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">🌐</span>
+        <h4>Cultural Immersion</h4>
+        <p>Understand the culture behind the language</p>
+      </div>
+      <div class="benefit-item">
+        <span class="benefit-icon">📱</span>
+        <h4>Learn Anywhere</h4>
+        <p>Access lessons on any device</p>
+      </div>
     </div>
   </div>
 </div>
