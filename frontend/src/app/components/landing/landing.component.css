@@ -19,7 +19,7 @@
 .landing-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5rem 2rem 2rem; /* Increased top padding */
   background-color: var(--background-color);
   color: var(--text-color);
   transition: all 0.3s ease;
@@ -32,22 +32,27 @@
   align-items: center;
   padding: 1rem 2rem;
   margin-bottom: 2rem;
-  position: relative;
-  z-index: 10;
-  background-color: #000000; /* Black background in light mode */
+  position: fixed; 
+  top: 1rem; 
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1000; /* Ensure navbar stays on top */
+  background-color: #000000;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
+  width: calc(100% - 4rem); /* Full width minus margins */
+  max-width: 1168px; /* 1200px - 2rem padding on each side */
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ffffff; /* White text for black navbar in light mode */
+  color: #ffffff; 
 }
 
 .theme-toggle {
   background: transparent;
-  border: 2px solid #ffffff; /* White border for black navbar in light mode */
+  border: 2px solid #ffffff; 
   font-size: 1.2rem;
   cursor: pointer;
   padding: 0.7rem;
@@ -69,7 +74,6 @@
   transform: scale(1.1);
 }
 
-/* Dark mode overrides for navbar */
 body.dark-mode .navbar {
   background-color: var(--background-color);
 }
@@ -128,9 +132,11 @@ body.dark-mode .theme-toggle:hover {
   text-align: center;
   transition: transform 0.3s;
   box-shadow: 0 4px 6px var(--card-shadow);
+  border: 2px solid #e8e8e8;
 }
 
-.language-card:hover {
+.language-card:hover,
+.feature-card:hover {
   transform: translateY(-10px);
 }
 
@@ -168,10 +174,7 @@ body.dark-mode .theme-toggle:hover {
   text-align: center;
   transition: transform 0.3s;
   box-shadow: 0 4px 6px var(--card-shadow);
-}
-
-.feature-card:hover {
-  transform: translateY(-10px);
+  border: 2px solid #e8e8e8;
 }
 
 .why-us-section {
@@ -191,6 +194,7 @@ body.dark-mode .theme-toggle:hover {
   background: var(--card-background);
   border-radius: 15px;
   box-shadow: 0 4px 6px var(--card-shadow);
+  border: 2px solid #e8e8e8;
 }
 
 .benefit-icon {
@@ -243,6 +247,13 @@ body.dark-mode .secondary-btn {
 
 body.dark-mode .secondary-btn {
   border-color: #ffffff;
+}
+
+/* Override borders for dark mode */
+body.dark-mode .language-card,
+body.dark-mode .feature-card,
+body.dark-mode .benefit-item {
+  border-color: var(--primary-color); /* Change border color in dark mode */
 }
 
 @media (max-width: 768px) {
