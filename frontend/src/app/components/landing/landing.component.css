@@ -34,7 +34,7 @@
   margin-bottom: 2rem;
   position: relative;
   z-index: 10;
-  background-color: var(--background-color);
+  background-color: #000000; /* Black background in light mode */
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
 }
@@ -42,12 +42,12 @@
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: var(--primary-color);
+  color: #ffffff; /* White text for black navbar in light mode */
 }
 
 .theme-toggle {
-  background: var(--card-background);
-  border: 2px solid var(--primary-color);
+  background: transparent;
+  border: 2px solid #ffffff; /* White border for black navbar in light mode */
   font-size: 1.2rem;
   cursor: pointer;
   padding: 0.7rem;
@@ -58,15 +58,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-color);
+  color: #ffffff; /* White icon for black navbar in light mode */
   position: relative;
   z-index: 100;
 }
 
 .theme-toggle:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(1.1);
+}
+
+/* Dark mode overrides for navbar */
+body.dark-mode .navbar {
+  background-color: var(--background-color);
+}
+
+body.dark-mode .logo {
+  color: var(--primary-color);
+}
+
+body.dark-mode .theme-toggle {
+  background: var(--card-background);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+body.dark-mode .theme-toggle:hover {
   background-color: var(--primary-color);
   color: var(--card-background);
-  transform: scale(1.1);
 }
 
 .hero-section {
