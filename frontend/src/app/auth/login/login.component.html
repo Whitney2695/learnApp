@@ -1,6 +1,9 @@
-<div class="auth-container">
+<div class="auth-container" [class.dark-mode]="isDarkMode">
   <div class="auth-card">
-    <h2>Welcome Back</h2>
+    <button class="theme-toggle" (click)="toggleDarkMode()">
+      <i [class]="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+    </button>
+    <h2>Login</h2>
     <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
       <div class="form-group">
         <label for="email">Email</label>

@@ -1,1 +1,65 @@
+<div class="test-container">
+  <!-- Step 1: Language Selection -->
+  <div *ngIf="currentStep === 1" class="language-selection">
+    <h2>Select Your Language</h2>
+    <div class="language-grid">
+      <div *ngFor="let lang of languages" 
+           class="language-card" 
+           (click)="selectLanguage(lang.code)">
+        <div class="language-icon">{{ lang.icon }}</div>
+        <h3>{{ lang.name }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Test Instructions -->
+  <div *ngIf="currentStep === 2" class="test-instructions">
+    <h2>Free Language Proficiency Test</h2>
+    <div class="instructions-content">
+      <p>This test will help determine your language proficiency level.</p>
+      <ul>
+        <li>The test contains multiple-choice questions</li>
+        <li>Answer all questions to the best of your ability</li>
+        <li>You can't go back to previous questions</li>
+        <li>You'll receive your results immediately after completion</li>
+      </ul>
+      <button class="start-btn" (click)="startTest()">Start Test</button>
+    </div>
+  </div>
+
+  <!-- Step 3: Test Questions -->
+  <div *ngIf="currentStep === 3" class="test-questions">
+    <div class="progress-bar">
+      <div class="progress" [style.width.%]="(currentQuestion + 1) / questions.length * 100"></div>
+    </div>
+    <div class="question-container" *ngIf="!testCompleted">
+      <h3>Question {{ currentQuestion + 1 }} of {{ questions.length }}</h3>
+      <p>{{ questions[currentQuestion].text }}</p>
+      <div class="options-grid">
+        <button *ngFor="let option of questions[currentQuestion].options"
+                class="option-btn"
+                (click)="answerQuestion(option.correct)">
+          {{ option.text }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 4: Results -->
+  <div *ngIf="currentStep === 4" class="test-results">
+    <h2>Test Complete!</h2>
+    <div class="results-content">
+      <p>Your Score: {{ score }} out of {{ questions.length }}</p>
+      <div class="score-percentage">
+        {{ (score / questions.length * 100).toFixed(1) }}%
+      </div>
+      <div class="recommendation">
+        <h3>Recommended Level:</h3>
+        <p *ngIf="score / questions.length >= 0.8">Advanced</p>
+        <p *ngIf="score / questions.length >= 0.6 && score / questions.length < 0.8">Intermediate</p>
+        <p *ngIf="score / questions.length < 0.6">Beginner</p>
+      </div>
+      <button class="restart-btn" (click)="restartTest()">Take Another Test</button>
+    </div>
+  </div>
 <p>free-test works!</p>

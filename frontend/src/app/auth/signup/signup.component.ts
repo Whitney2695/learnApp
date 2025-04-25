@@ -28,4 +28,20 @@ export class SignupComponent {
   goToLogin() {
     this.router.navigate(['/login']);
   }
+
+  isDarkMode = false;
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    // Optional: Save the preference to localStorage
+    localStorage.setItem('darkMode', this.isDarkMode.toString());
+  }
+
+  ngOnInit() {
+    // Optional: Load the saved preference
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode) {
+      this.isDarkMode = savedDarkMode === 'true';
+    }
+  }
 }

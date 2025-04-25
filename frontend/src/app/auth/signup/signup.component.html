@@ -1,6 +1,9 @@
-<div class="auth-container">
+<div class="auth-container" [class.dark-mode]="isDarkMode">
   <div class="auth-card">
-    <h2>Create Account</h2>
+    <button class="theme-toggle" (click)="toggleDarkMode()">
+      <i [class]="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+    </button>
+    <h2>Sign Up</h2>
     <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
       <div class="form-group">
         <label for="name">Full Name</label>

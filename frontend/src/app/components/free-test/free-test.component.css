@@ -1,0 +1,113 @@
+.test-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.language-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 1px solid #e0e0e0;
+}
+
+.language-card:hover {
+  transform: translateY(-5px);
+}
+
+.language-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.instructions-content {
+  margin: 2rem 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.progress {
+  height: 100%;
+  background-color: #2563eb;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.question-container {
+  margin-bottom: 2rem;
+}
+
+.options-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.option-btn {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.option-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.results-content {
+  text-align: center;
+}
+
+.score-percentage {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  color: #2563eb;
+}
+
+.start-btn, .restart-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.start-btn:hover, .restart-btn:hover {
+  opacity: 0.9;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .test-container {
+    padding: 1rem;
+  }
+
+  .language-grid {
+    grid-template-columns: 1fr;
+  }
+}
