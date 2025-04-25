@@ -44,6 +44,39 @@
   max-width: 1168px; /* 1200px - 2rem padding on each side */
 }
 
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.nav-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode .nav-btn {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+body.dark-mode .nav-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
 .logo {
   font-size: 1.8rem;
   font-weight: bold;

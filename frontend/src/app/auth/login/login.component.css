@@ -1,0 +1,144 @@
+/* Auth styles */
+.auth-container {  min-height: 100vh;
+  display: flex;  align-items: center;
+  justify-content: center;  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  padding: 1rem;}
+.auth-card {
+  background: var(--card-background);  padding: 2.5rem;
+  border-radius: 15px;  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;  max-width: 400px;
+  transition: all 0.3s ease;}
+h2 {
+  text-align: center;  color: var(--primary-color);
+  margin-bottom: 2rem;  font-size: 2rem;
+  font-weight: 600;}
+.form-group {
+  margin-bottom: 1.5rem;  position: relative;
+}
+label {  display: block;
+  margin-bottom: 0.5rem;  color: var(--text-color);
+  font-weight: 500;  transition: color 0.3s ease;
+}
+input {  width: 100%;
+  padding: 0.875rem;  border: 2px solid #e8e8e8;
+  border-radius: 10px;  font-size: 1rem;
+  background-color: var(--card-background);  color: var(--text-color);
+  transition: all 0.3s ease;}
+input:focus {
+  outline: none;  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(98, 0, 234, 0.1);}
+.submit-btn {
+  width: 100%;  padding: 1rem;
+  background-color: var(--primary-color);  color: white;
+  border: none;  border-radius: 10px;
+  font-size: 1rem;  font-weight: 600;
+  cursor: pointer;  transition: all 0.3s ease;
+  margin-top: 1rem;}
+.submit-btn:hover {
+  transform: translateY(-2px);  box-shadow: 0 4px 15px rgba(98, 0, 234, 0.3);
+}
+.submit-btn:active {  transform: translateY(0);
+}
+.auth-switch {  text-align: center;
+  margin-top: 1.5rem;  color: var(--text-color);
+}
+.auth-switch a {  color: var(--primary-color);
+  text-decoration: none;  cursor: pointer;
+  font-weight: 500;  margin-left: 0.5rem;
+  transition: all 0.3s ease;}
+.auth-switch a:hover {
+  text-decoration: underline;  opacity: 0.8;
+}
+/* Dark mode specific styles */:host-context(body.dark-mode) .auth-card {
+  background-color: var(--card-background);  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+:host-context(body.dark-mode) input {  border-color: var(--primary-color);
+  background-color: var(--card-background);}
+:host-context(body.dark-mode) input:focus {
+  box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.1);}
+/* Error states */
+input.ng-invalid.ng-touched {  border-color: #ff4444;
+}
+.error-message {  color: #ff4444;
+  font-size: 0.875rem;  margin-top: 0.5rem;
+  display: block;}
+/* Responsive adjustments */
+@media (max-width: 480px) {  .auth-card {
+    padding: 1.5rem;  }
+  h2 {
+    font-size: 1.75rem;  }
+  input {
+    padding: 0.75rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

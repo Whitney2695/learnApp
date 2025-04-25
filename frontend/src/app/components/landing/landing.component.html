@@ -1,9 +1,13 @@
 <div class="landing-container" [class.dark-mode]="isDarkMode">
   <nav class="navbar">
     <div class="logo">LinguaLearn</div>
-    <button class="theme-toggle" (click)="toggleDarkMode()">
-      <i [class]="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
-    </button>
+    <div class="nav-buttons">
+      <button class="nav-btn" (click)="signIn()">Login</button>
+      <button class="nav-btn" (click)="openSignUp()">Sign Up</button>
+      <button class="theme-toggle" (click)="toggleDarkMode()">
+        <i [class]="isDarkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
+      </button>
+    </div>
   </nav>
 
   <div class="hero-section">
