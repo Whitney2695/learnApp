@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --bg-color: #f8f5ff; /* Light purple background */
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --text-secondary: #666666;
+  --primary-color: #8a6bc1; /* Softer purple */
+  --primary-color-dark: #7455aa; /* Darker soft purple */
+  --primary-color-light: rgba(138, 107, 193, 0.1);
+  --border-color: #e8e3f5; /* Light purple border */
+  --input-background: #ffffff;
+  --card-shadow: rgba(138, 107, 193, 0.1);
+}
+
+.dark-mode {
+  --bg-color: #1a1a2e; /* Dark purple-blue background */
+  --card-background: #2d2d3f;
+  --text-color: #ffffff;
+  --text-secondary: #bbbbbb;
+  --border-color: #404055;
+  --input-background: #3d3d4f;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Add a subtle gradient to the auth container */
+.auth-container {
+  background: linear-gradient(135deg, var(--bg-color) 0%, #f0ebff 100%);
+}
