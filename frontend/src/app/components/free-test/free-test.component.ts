@@ -25,6 +25,28 @@ export class FreeTestComponent {
   ];
 
   questions = [
+    // English questions
+    {
+      text: "Select the correct meaning of 'Hello'",
+      options: [
+        { text: 'Greeting', correct: true },
+        { text: 'Goodbye', correct: false },
+        { text: 'Thank you', correct: false },
+        { text: 'Please', correct: false }
+      ],
+      language: 'en'
+    },
+    {
+      text: "What does 'apple' refer to?",
+      options: [
+        { text: 'A fruit', correct: true },
+        { text: 'A vegetable', correct: false },
+        { text: 'An animal', correct: false },
+        { text: 'A vehicle', correct: false }
+      ],
+      language: 'en'
+    },
+    // French questions
     {
       text: "Select the correct translation for 'Hello'",
       options: [
@@ -35,7 +57,58 @@ export class FreeTestComponent {
       ],
       language: 'fr'
     },
-    // Add more questions here
+    {
+      text: "What is 'pomme' in English?",
+      options: [
+        { text: 'Apple', correct: true },
+        { text: 'Potato', correct: false },
+        { text: 'Pear', correct: false },
+        { text: 'Peach', correct: false }
+      ],
+      language: 'fr'
+    },
+    // Swahili questions
+    {
+      text: "What does 'Jambo' mean?",
+      options: [
+        { text: 'Hello', correct: true },
+        { text: 'Goodbye', correct: false },
+        { text: 'Thank you', correct: false },
+        { text: 'Please', correct: false }
+      ],
+      language: 'sw'
+    },
+    {
+      text: "What is 'ndizi' in English?",
+      options: [
+        { text: 'Banana', correct: true },
+        { text: 'Orange', correct: false },
+        { text: 'Apple', correct: false },
+        { text: 'Mango', correct: false }
+      ],
+      language: 'sw'
+    },
+    // German questions
+    {
+      text: "What does 'Guten Tag' mean?",
+      options: [
+        { text: 'Good day', correct: true },
+        { text: 'Good night', correct: false },
+        { text: 'Thank you', correct: false },
+        { text: 'Please', correct: false }
+      ],
+      language: 'de'
+    },
+    {
+      text: "What is 'Apfel' in English?",
+      options: [
+        { text: 'Apple', correct: true },
+        { text: 'Orange', correct: false },
+        { text: 'Pear', correct: false },
+        { text: 'Banana', correct: false }
+      ],
+      language: 'de'
+    }
   ];
 
   selectLanguage(langCode: string) {
