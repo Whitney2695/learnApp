@@ -1,27 +1,12 @@
 :root {
-  --primary-color: #6200ea;
-  --secondary-color: #4a148c;
-  --background-color: #ffffff;
-  --text-color: #333333;
+  --primary-color: #8a6bc1;
+  --secondary-color: #7455aa;
+  --background-color: #f8f5ff;
+  --text-color: #000000;
   --card-background: #ffffff;
   --card-shadow: rgba(0, 0, 0, 0.1);
-  --input-border: #e0e0e0;
+  --input-border: #e8e8e8;
   --error-color: #ff4444;
-  --success-color: #00c853;
-  --warning-color: #ffa000;
-}
-
-.dark-mode {
-  --primary-color: #9d4edd;
-  --secondary-color: #7b2cbf;
-  --background-color: #121212;
-  --text-color: #ffffff;
-  --card-background: #1e1e1e;
-  --card-shadow: rgba(255, 255, 255, 0.1);
-  --input-border: #333333;
-  --error-color: #ff6b6b;
-  --success-color: #00e676;
-  --warning-color: #ffb74d;
 }
 
 .auth-container {
@@ -29,18 +14,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(135deg, var(--background-color) 0%, #f0ebff 100%);
   padding: 1rem;
 }
 
 .auth-card {
+  display: flex;
   background: var(--card-background);
-  padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 15px var(--card-shadow);
   width: 100%;
-  max-width: 400px;
-  transition: all 0.3s ease;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.image-side {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-image: url('/assets/images/signup-image.jpg');
+  min-height: 500px;
+}
+
+.form-side {
+  flex: 1;
+  padding: 2.5rem;
 }
 
 h2 {
@@ -266,200 +264,6 @@ input:focus {
 
 /* Add these CSS variables to improve visibility in both modes */
 :root {
-  --primary-color: #2563eb;          /* Changed to a visible blue */
-  --secondary-color: #1d4ed8;
-  --background-color: #ffffff;
-  --text-color: #333333;
-  --card-background: #ffffff;
-  --card-shadow: rgba(0, 0, 0, 0.1);
-  --input-border: #e0e0e0;
-  --error-color: #dc2626;
-  --success-color: #16a34a;
-  --warning-color: #ca8a04;
-}
-
-.dark-mode {
-  --primary-color: #9d4edd;
-  --secondary-color: #7b2cbf;
-  --background-color: #121212;
-  --text-color: #ffffff;
-  --card-background: #1e1e1e;
-  --card-shadow: rgba(255, 255, 255, 0.1);
-  --input-border: #333333;
-  --error-color: #ff6b6b;
-  --success-color: #00e676;
-  --warning-color: #ffb74d;
-}
-
-/* Add styles for form labels */
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: var(--text-color);
-  font-weight: 500;
-}
-
-/* Update heading styles */
-h2 {
-  color: var(--text-color);
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-/* Password strength indicator */
-.password-strength {
-  height: 4px;
-  margin-top: 0.5rem;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.strength-weak {
-  background-color: var(--error-color);
-  width: 33%;
-}
-
-.strength-medium {
-  background-color: var(--warning-color);
-  width: 66%;
-}
-
-.strength-strong {
-  background-color: var(--success-color);
-  width: 100%;
-}
-
-/* Error states */
-input.ng-invalid.ng-touched {
-  border-color: var(--error-color);
-}
-
-.error-message {
-  color: var(--error-color);
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-  display: block;
-}
-
-/* Password match indicator */
-.password-match {
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-}
-
-.match-success {
-  color: var(--success-color);
-}
-
-.match-error {
-  color: var(--error-color);
-}
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-  .auth-card {
-    padding: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.75rem;
-  }
-
-  input {
-    padding: 0.75rem;
-  }
-}
-
-/* Update theme toggle button styles */
-.theme-toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: var(--card-background);
-  border: 2px solid var(--primary-color);
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0.7rem;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary-color);
-  box-shadow: 0 2px 5px var(--card-shadow);
-}
-
-.theme-toggle:hover {
-  background-color: var(--primary-color);
-  color: var(--card-background);
-  transform: scale(1.1);
-}
-
-/* Update submit button styles */
-.submit-btn {
-  width: 100%;
-  padding: 1rem;
-  background-color: #1a73e8;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-  box-shadow: 0 2px 5px var(--card-shadow);
-}
-
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px var(--card-shadow);
-  opacity: 0.95;
-}
-
-.submit-btn:active {
-  transform: translateY(0);
-}
-
-/* Update input styles for better visibility */
-input {
-  width: 100%;
-  padding: 0.875rem;
-  border: 2px solid var(--input-border);
-  border-radius: 10px;
-  font-size: 1rem;
-  background-color: var(--card-background);
-  color: var(--text-color);
-  transition: all 0.3s ease;
-}
-
-input:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(98, 0, 234, 0.1);
-}
-
-/* Update link styles */
-.auth-switch a {
-  color: var(--primary-color);
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 600;
-  margin-left: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.auth-switch a:hover {
-  text-decoration: underline;
-  opacity: 0.8;
-}
-
-/* Add these CSS variables to improve visibility in both modes */
-:root {
   --primary-color: #6200ea;
   --secondary-color: #4a148c;
   --background-color: #ffffff;
@@ -2620,6 +2424,308 @@ input:focus {
 }
 
 /* Add styles for form labels */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Update heading styles */
+h2 {
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Password strength indicator */
+.password-strength {
+  height: 4px;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.strength-weak {
+  background-color: var(--error-color);
+  width: 33%;
+}
+
+.strength-medium {
+  background-color: var(--warning-color);
+  width: 66%;
+}
+
+.strength-strong {
+  background-color: var(--success-color);
+  width: 100%;
+}
+
+/* Error states */
+input.ng-invalid.ng-touched {
+  border-color: var(--error-color);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Password match indicator */
+.password-match {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.match-success {
+  color: var(--success-color);
+}
+
+.match-error {
+  color: var(--error-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  input {
+    padding: 0.75rem;
+  }
+}
+
+/* Update theme toggle button styles */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--card-background);
+  border: 2px solid var(--primary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.7rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  box-shadow: 0 2px 5px var(--card-shadow);
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary-color);
+  color: var(--card-background);
+  transform: scale(1.1);
+}
+
+/* Update submit button styles */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px var(--card-shadow);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--card-shadow);
+  opacity: 0.95;
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Update input styles for better visibility */
+input {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid var(--input-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(98, 0, 234, 0.1);
+}
+
+/* Update link styles */
+.auth-switch a {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Add these CSS variables to improve visibility in both modes */
+:root {
+  --primary-color: #6200ea;
+  --secondary-color: #4a148c;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --card-background: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --input-border: #e0e0e0;
+  --error-color: #ff4444;
+  --success-color: #00c853;
+  --warning-color: #ffa000;
+}
+
+.dark-mode {
+  --primary-color: #9d4edd;
+  --secondary-color: #7b2cbf;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-background: #1e1e1e;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --input-border: #333333;
+  }
+
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--card-background);
+  border: 2px solid var(--primary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.7rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  box-shadow: 0 2px 5px var(--card-shadow);
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary-color);
+  color: var(--card-background);
+  transform: scale(1.1);
+}
+
+/* Update submit button styles */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px var(--card-shadow);
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--card-shadow);
+  opacity: 0.95;
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Update input styles for better visibility */
+input {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid var(--input-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(98, 0, 234, 0.1);
+}
+
+/* Update link styles */
+.auth-switch a {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+:root {
+  --primary-color: #6200ea;
+  --secondary-color: #4a148c;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --card-background: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --input-border: #e0e0e0;
+  --error-color: #ff4444;
+  --success-color: #00c853;
+  --warning-color: #ffa000;
+}
+
+.dark-mode {
+  --primary-color: #9d4edd;
+  --secondary-color: #7b2cbf;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-background: #1e1e1e;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --input-border: #333333;
+  --error-color: #ff6b6b;
+  --success-color: #00e676;
+  --warning-color: #ffb74d;
+}
+
 label {
   display: block;
   margin-bottom: 0.5rem;

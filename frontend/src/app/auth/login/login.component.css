@@ -9,17 +9,6 @@
   --error-color: #ff4444;
 }
 
-.dark-mode {
-  --primary-color: #9d4edd;
-  --secondary-color: #7b2cbf;
-  --background-color: #121212;
-  --text-color: #ffffff;
-  --card-background: #1e1e1e;
-  --card-shadow: rgba(255, 255, 255, 0.1);
-  --input-border: #333333;
-  --error-color: #ff6b6b;
-}
-
 .auth-container {
   min-height: 100vh;
   display: flex;
@@ -27,6 +16,29 @@
   justify-content: center;
   background: linear-gradient(135deg, var(--background-color) 0%, #f0ebff 100%);
   padding: 1rem;
+}
+
+.auth-card {
+  display: flex;
+  background: var(--card-background);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--card-shadow);
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.image-side {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-image: url('/assets/images/login-image.jpg');
+  min-height: 500px;
+}
+
+.form-side {
+  flex: 1;
+  padding: 2.5rem;
 }
 
 /* Error states */
