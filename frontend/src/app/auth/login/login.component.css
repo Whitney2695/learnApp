@@ -20,6 +20,30 @@
 
 .auth-card {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-side {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.auth-card {
+  display: flex;
   background: var(--card-background);
   border-radius: 15px;
   box-shadow: 0 4px 15px var(--card-shadow);
