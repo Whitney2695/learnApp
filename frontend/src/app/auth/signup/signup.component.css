@@ -2733,6 +2733,31 @@ label {
   font-weight: 500;
 }
 
+.auth-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-side {
+  flex: 1;
+  padding: 20px;
+}
+
+.image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 /* Update heading styles */
 h2 {
   color: var(--text-color);
