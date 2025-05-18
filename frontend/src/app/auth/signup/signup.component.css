@@ -2790,7 +2790,6 @@ h2 {
   width: 100%;
 }
 
-/* Error states */
 input.ng-invalid.ng-touched {
   border-color: var(--error-color);
 }
@@ -2802,7 +2801,6 @@ input.ng-invalid.ng-touched {
   display: block;
 }
 
-/* Password match indicator */
 .password-match {
   font-size: 0.875rem;
   margin-top: 0.5rem;
