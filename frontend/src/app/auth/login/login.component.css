@@ -65,7 +65,6 @@
   padding: 2.5rem;
 }
 
-/* Error states */
 input.ng-invalid.ng-touched {
   border-color: var(--error-color);
 }
