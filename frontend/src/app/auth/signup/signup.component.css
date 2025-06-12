@@ -2641,7 +2641,6 @@ input:focus {
   transform: scale(1.1);
 }
 
-/* Update submit button styles */
 .submit-btn {
   width: 100%;
   padding: 1rem;
