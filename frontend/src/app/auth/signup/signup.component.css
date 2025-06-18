@@ -2489,7 +2489,6 @@ input.ng-invalid.ng-touched {
   color: var(--error-color);
 }
 
-/* Responsive adjustments */
 @media (max-width: 480px) {
   .auth-card {
     padding: 1.5rem;
