@@ -2423,7 +2423,6 @@ input:focus {
   --warning-color: #ffb74d;
 }
 
-/* Add styles for form labels */
 label {
   display: block;
   margin-bottom: 0.5rem;
