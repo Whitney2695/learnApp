@@ -2396,7 +2396,6 @@ input:focus {
   opacity: 0.8;
 }
 
-/* Add these CSS variables to improve visibility in both modes */
 :root {
   --primary-color: #6200ea;
   --secondary-color: #4a148c;
@@ -2446,7 +2445,7 @@ h2 {
 }
 
 .strength-weak {
-  background-color: var(--error-color);
+  background-color: var(--error-color);                                                                                   
   width: 33%;
 }
 
