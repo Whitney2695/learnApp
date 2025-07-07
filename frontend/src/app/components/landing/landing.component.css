@@ -96,7 +96,7 @@ body.dark-mode .nav-btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff; /* White icon for black navbar in light mode */
+  color: #ffffff;
   position: relative;
   z-index: 100;
 }
