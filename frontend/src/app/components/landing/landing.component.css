@@ -41,7 +41,7 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
   width: calc(100% - 4rem); /* Full width minus margins */
-  max-width: 1168px; /* 1200px - 2rem padding on each side */
+  max-width: 1168px;
 }
 
 .nav-buttons {
