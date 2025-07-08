@@ -36,11 +36,11 @@
   top: 1rem; 
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center horizontally */
-  z-index: 1000; /* Ensure navbar stays on top */
+  z-index: 1000;
   background-color: #000000;
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
-  width: calc(100% - 4rem); /* Full width minus margins */
+  width: calc(100% - 4rem); 
   max-width: 1168px;
 }
 
