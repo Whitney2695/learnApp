@@ -34,8 +34,8 @@
   margin-bottom: 2rem;
   position: fixed; 
   top: 1rem; 
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center horizontally */
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   background-color: #000000;
   border-radius: 12px;
