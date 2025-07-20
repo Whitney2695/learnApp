@@ -19,7 +19,7 @@
 .landing-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5rem 2rem 2rem; /* Increased top padding */
+  padding: 5rem 2rem 2rem;
   background-color: var(--background-color);
   color: var(--text-color);
   transition: all 0.3s ease;
